@@ -1,5 +1,4 @@
 import Notiflix from 'notiflix';
-import SlimSelect from 'slim-select';
 import { fetchBreeds, fetchCatByBreed } from './cat-api';
 
 const refs = {
@@ -10,10 +9,6 @@ const refs = {
 }
 
 refs.errorText.style.display = "none";
-
-// new SlimSelect({
-//   select: '#selectElement'
-// });
 
 fetchBreeds()
   .then(({ data }) => data.forEach(({ id, name }) => {
